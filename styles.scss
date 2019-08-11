@@ -1,0 +1,145 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(212, 212, 212);
+  position: relative;
+  overflow: hidden;
+  font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell,
+    "Helvetica Neue";
+
+  &::after {
+    content: "";
+    background-image: url(./sebastian-unrau-AAmVGUnUrpU-unsplash.jpg);
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .slidecontainer {
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    bottom: 4%;
+  }
+
+  .card {
+    position: absolute;
+
+    border-radius: 15px;
+    // box-shadow: 0 4px 6px rgb(167, 167, 167), 0 5px 15px rgb(156, 156, 156);
+
+    &.one {
+      height: 600px;
+      width: 600px;
+      background-image: url(https://images.unsplash.com/photo-1529641484336-ef35148bab06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+      background-size: cover;
+      top: 7%;
+      animation: cardOne 31s linear infinite alternate;
+    }
+    &.two {
+      height: 400px;
+      width: 400px;
+      background-image: url(https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=655&q=80);
+      background-size: cover;
+      top: 65%;
+      animation: cardTwo 25s linear infinite alternate;
+    }
+    &.three {
+      height: 300px;
+      width: 300px;
+      background-image: url(https://images.unsplash.com/photo-1492546643178-96d64f3fd824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80);
+      background-size: cover;
+      top: 39%;
+      animation: cardThree 17s linear infinite alternate;
+    }
+  }
+  .overlay {
+    position: absolute;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    &.one {
+      height: 300px;
+      width: 300px;
+      top: 14%;
+      animation: overlayOne 56s linear infinite alternate;
+    }
+    &.two {
+      height: 250px;
+      width: 300px;
+      left: 58%;
+      animation: overlayTwo 25s linear infinite alternate;
+    }
+    &.three {
+      height: 250px;
+      width: 300px;
+      left: 28%;
+      animation: overlayThree 32s linear infinite alternate;
+    }
+  }
+}
+
+@keyframes cardOne {
+  0% {
+    left: -70%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes cardTwo {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes cardThree {
+  0% {
+    right: -120%;
+  }
+
+  100% {
+    right: 120%;
+  }
+}
+
+@keyframes overlayOne {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes overlayTwo {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: -100%;
+  }
+}
+
+@keyframes overlayThree {
+  0% {
+    top: 200%;
+  }
+
+  100% {
+    top: -100%;
+  }
+}

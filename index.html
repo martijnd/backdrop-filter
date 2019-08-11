@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <title>Backdrop-filter</title>
+  </head>
+  <body>
+    <div class="card one"></div>
+    <div class="card two"></div>
+    <div class="card three"></div>
+    <div class="overlay one"></div>
+    <div class="overlay two"></div>
+    <div class="overlay three"></div>
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="1"
+        max="20"
+        value="10"
+        class="slider"
+        id="blur-slider"
+      />
+      <p>
+        <strong>Current blur: <span id="blur-value">10px</span></strong>
+      </p>
+    </div>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>

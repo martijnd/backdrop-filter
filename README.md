@@ -2,4 +2,4 @@
 Simple demo for the backdrop filter
 
 # Live preview
-[Check it out!](martijnd.github.io/backdrop-filter)
+[Check it out!](https://martijnd.github.io/backdrop-filter)

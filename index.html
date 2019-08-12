@@ -15,18 +15,45 @@
     <div class="overlay one"></div>
     <div class="overlay two"></div>
     <div class="overlay three"></div>
-    <div class="slidecontainer">
-      <input
-        type="range"
-        min="1"
-        max="20"
-        value="10"
-        class="slider"
-        id="blur-slider"
-      />
-      <p>
-        <strong>Current blur: <span id="blur-value">10px</span></strong>
-      </p>
+    <div class="controls">
+      <label for="blur">
+        <input type="radio" name="filter" id="blur" value="blur" selected />Blur
+      </label>
+      <label for="grayscale">
+        <input
+          type="radio"
+          name="filter"
+          id="grayscale"
+          value="grayscale"
+        />grayscale
+      </label>
+      <label for="sepia">
+        <input type="radio" name="filter" id="sepia" value="sepia" />sepia
+      </label>
+      <label for="invert">
+        <input type="radio" name="filter" id="invert" value="invert" />invert
+      </label>
+      <label for="saturate">
+        <input
+          type="radio"
+          name="filter"
+          id="saturate"
+          value="saturate"
+        />saturate
+      </label>
+      <div class="slidecontainer">
+        <input
+          type="range"
+          min="1"
+          max="20"
+          value="10"
+          class="slider"
+          id="blur-slider"
+        />
+        <p>
+          <strong>Current blur: <span id="blur-value">10px</span></strong>
+        </p>
+      </div>
     </div>
 
     <script src="main.js" defer></script>

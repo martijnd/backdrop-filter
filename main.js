@@ -1,14 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("loaded");
-    var slider = (document.querySelector("#blur-slider"));
-    var blurValue = document.getElementById("blur-value");
-    var overlays = document.querySelectorAll(".overlay");
-    slider.addEventListener("input", function () {
-        var value = slider.value;
-        blurValue.innerHTML = value + "px";
-        overlays.forEach(function (overlay) {
-            //@ts-ignore
-            overlay.style.backdropFilter = "blur(" + value + "px)";
-        });
+var slider;
+var filterType = "blur";
+var unit = "px";
+var max = "20";
+var value = "10";
+slider = document.querySelector("#blur-slider");
+var blurValue = document.getElementById("blur-value");
+var overlays = document.querySelectorAll(".overlay");
+var radios = document.querySelectorAll('input[type="radio"]');
+var setFilter = function (event) {
+    filterType = event.target.id;
+    unit = filterType === "blur" ? "px" : "%";
+    max = filterType === "blur" ? "20" : "100";
+    slider.setAttribute("max", max);
+    overlays.forEach(function (overlay) {
+        //@ts-ignore
+        return (overlay.style.backdropFilter = filterType + "(10" + unit + ")");
     });
+};
+slider.addEventListener("input", function () {
+    value = slider.value;
+    blurValue.innerHTML = "" + value + unit;
+    overlays.forEach(function (overlay) {
+        //@ts-ignore
+        return (overlay.style.backdropFilter = filterType + "(" + value + unit + ")");
+    });
+});
+radios.forEach(function (radio) {
+    radio.addEventListener("click", function (event) { return setFilter(event); });
 });

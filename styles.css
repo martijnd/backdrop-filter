@@ -18,14 +18,16 @@ body::after {
   position: absolute;
   z-index: -1;
 }
-body .slidecontainer {
+body .controls {
   width: 100vw;
   text-align: center;
   position: absolute;
   bottom: 4%;
+  display: flex;
+  justify-content: space-around;
 }
-body .slidecontainer strong {
-  color: #b71c1c;
+body .controls .slidecontainer strong {
+  color: #771414;
 }
 body .card {
   position: absolute;

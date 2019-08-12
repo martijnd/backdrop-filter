@@ -1,12 +1,11 @@
-var slider;
 var filterType = "blur";
 var unit = "px";
 var max = "20";
 var value = "10";
-slider = document.querySelector("#blur-slider");
+var radios = document.querySelectorAll('input[type="radio"]');
+var slider = document.querySelector("#blur-slider");
 var blurValue = document.getElementById("blur-value");
 var overlays = document.querySelectorAll(".overlay");
-var radios = document.querySelectorAll('input[type="radio"]');
 var setFilter = function (event) {
     filterType = event.target.id;
     unit = filterType === "blur" ? "px" : "%";
@@ -14,7 +13,7 @@ var setFilter = function (event) {
     slider.setAttribute("max", max);
     overlays.forEach(function (overlay) {
         //@ts-ignore
-        return (overlay.style.backdropFilter = filterType + "(10" + unit + ")");
+        return (overlay.style.backdropFilter = filterType + "(" + value + unit + ")");
     });
 };
 slider.addEventListener("input", function () {

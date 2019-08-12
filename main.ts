@@ -1,16 +1,14 @@
-let slider: HTMLInputElement;
 let filterType = "blur";
 let unit = "px";
 let max = "20";
 let value = "10";
 
-slider = <HTMLInputElement>document.querySelector("#blur-slider");
-let blurValue: HTMLElement = document.getElementById("blur-value");
-
-let overlays: NodeListOf<HTMLElement> = document.querySelectorAll(".overlay");
 const radios: NodeListOf<HTMLInputElement> = document.querySelectorAll(
   'input[type="radio"]'
 );
+const slider: HTMLInputElement = document.querySelector("#blur-slider");
+const blurValue: HTMLElement = document.getElementById("blur-value");
+const overlays: NodeListOf<HTMLElement> = document.querySelectorAll(".overlay");
 
 const setFilter = (event: Event) => {
   filterType = (event.target as HTMLInputElement).id;
@@ -23,7 +21,7 @@ const setFilter = (event: Event) => {
   overlays.forEach(
     (overlay: HTMLElement) =>
       //@ts-ignore
-      (overlay.style.backdropFilter = `${filterType}(10${unit})`)
+      (overlay.style.backdropFilter = `${filterType}(${value}${unit})`)
   );
 };
 

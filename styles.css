@@ -19,12 +19,18 @@ body::after {
   z-index: -1;
 }
 body .controls {
-  width: 100vw;
-  text-align: center;
+  text-align: left;
   position: absolute;
   bottom: 4%;
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+}
+body .controls input {
+  margin-top: 10px;
 }
 body .controls .slidecontainer strong {
   color: #771414;
@@ -61,25 +67,30 @@ body .overlay {
   position: absolute;
   border-radius: 15px;
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.5);
 }
 body .overlay.one {
-  height: 300px;
-  width: 300px;
-  top: 14%;
+  height: 25%;
+  width: 25%;
+  top: 30%;
   animation: overlayOne 56s linear infinite alternate;
 }
 body .overlay.two {
-  height: 250px;
-  width: 300px;
+  height: 30%;
+  width: 40%;
   left: 58%;
   animation: overlayTwo 25s linear infinite alternate;
 }
 body .overlay.three {
-  height: 250px;
-  width: 300px;
-  left: 28%;
+  height: 35%;
+  width: 30%;
+  left: 34%;
   animation: overlayThree 32s linear infinite alternate;
+}
+body .overlay.four {
+  height: 40%;
+  width: 30%;
+  left: 14%;
+  animation: overlayFour 60s linear infinite alternate;
 }
 
 @keyframes cardOne {
@@ -108,15 +119,15 @@ body .overlay.three {
 }
 @keyframes overlayOne {
   0% {
-    left: -100%;
+    left: -30%;
   }
   100% {
-    left: -100%;
+    left: 100%;
   }
 }
 @keyframes overlayTwo {
   0% {
-    top: 100%;
+    top: 105%;
   }
   100% {
     top: -100%;
@@ -124,10 +135,18 @@ body .overlay.three {
 }
 @keyframes overlayThree {
   0% {
-    top: 200%;
+    top: 120%;
   }
   100% {
     top: -100%;
+  }
+}
+@keyframes overlayFour {
+  0% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: -100%;
   }
 }
 
